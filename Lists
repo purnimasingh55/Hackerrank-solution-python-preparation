@@ -1,0 +1,25 @@
+if __name__ == '__main__':
+    N = int(input())
+    List = []
+for i in range(N):
+    case = input().split()
+    if case[0] == 'insert':
+        List.insert(int(case[1]), int(case[2]))
+    elif case[0] == 'append':
+        List.append(int(case[1]))
+    elif case[0] == 'remove':
+        List.remove(int(case[1]))
+    elif case[0] == 'pop':
+        List.pop()
+    elif case[0] == 'sort':
+        List.sort()
+    elif case[0] == 'reverse':
+        List.reverse()
+    elif case[0] == 'index':
+        print (List.index(case[1]) )
+    elif case[0] == 'count':
+        print(List.count(case[1]))
+    else:
+        print(List)
+ 
+ 
