@@ -1,0 +1,23 @@
+if __name__ == '__main__':
+    record = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        record.append([name,score]) 
+    x = 99999
+    for i in range(len(record)):
+        if x > float(record[i][1]):
+            x = float(record[i][1])
+    y = 999999
+    for i in range(len(record)):
+        if float(record[i][1]) > float(x) and y > float(record[i][1]):
+            y = float(record[i][1])
+    second_highest = []
+    for i in range(len(record)):
+        if float(record[i][1]) == float(y):
+            second_highest.append(record[i][0])
+    second_highest = sorted(second_highest)
+
+    for i in range(len(second_highest)):
+        print(second_highest[i])
+
