@@ -1,0 +1,12 @@
+def swap_case(s):
+    c = ''
+    for i in s:                                       
+        if i.isupper():                           
+            x = 97 + (ord(i)-65)%26               
+            c = c +chr(x)                         
+        elif i.islower():                         
+            x = 65 + (ord(i)-97)%26               
+            c = c+chr(x)                          
+        else:                                     
+            c = c+i                               
+    return c
